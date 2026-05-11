@@ -88,30 +88,34 @@ function Order() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-96 bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] text-white flex items-center">
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">Order Now</h1>
-          <p className="text-xl text-gray-200">Order directly via WhatsApp – no waiting, no apps</p>
+      <section className="relative h-80 bg-gradient-to-br from-[#0a0a0a] via-[#111111] to-[#0a0a0a] text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-r from-[#25D366]/10 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-gradient-to-r from-orange-500/10 to-transparent rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center pt-20">
+          <div className="max-w-2xl">
+            <h1 className="text-5xl font-bold mb-4">Order Now</h1>
+            <p className="text-xl text-gray-400">Order directly via WhatsApp – no waiting, no apps</p>
+          </div>
         </div>
       </section>
 
-      {/* Category Tabs */}
-      <section className="sticky top-0 bg-white shadow-md z-10">
+      <section className="sticky top-[72px] bg-[#0a0a0a]/95 backdrop-blur-xl border-b border-white/5 z-10 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto py-4 gap-4">
+          <div className="flex overflow-x-auto gap-3 pb-2">
             {categories.map(cat => (
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`flex-shrink-0 flex items-center gap-2 px-6 py-3 rounded-full whitespace-nowrap transition ${
+                className={`flex-shrink-0 flex items-center gap-2.5 px-5 py-2.5 rounded-lg whitespace-nowrap text-sm font-medium transition-all duration-300 ${
                   activeCategory === cat.id 
-                    ? 'bg-[#1a1a1a] text-white' 
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-[#25D366] text-white shadow-lg shadow-[#25D366]/20' 
+                    : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'
                 }`}
               >
-                <span>{cat.emoji}</span>
+                <span className="text-lg">{cat.emoji}</span>
                 {cat.name}
               </button>
             ))}
@@ -119,27 +123,26 @@ function Order() {
         </div>
       </section>
 
-      {/* Menu Items */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold text-[#1a1a1a] mb-8">Select Your Items</h2>
-              <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-white mb-8">Select Your Items</h2>
+              <div className="space-y-4">
                 {menuData[activeCategory]?.map((item, idx) => (
                   <div 
                     key={idx}
-                    className="bg-white rounded-2xl p-6 shadow-lg"
+                    className="bg-[#111111] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 p-6 border border-white/5"
                   >
                     <div className="flex justify-between items-start">
                       <div>
-                        <h3 className="text-xl font-bold text-[#1a1a1a] mb-2">{item.name}</h3>
-                        <p className="text-gray-600 mb-4">{item.description}</p>
-                        <p className="text-2xl font-bold text-[#1a1a1a]">{item.price} SAR</p>
+                        <h3 className="text-xl font-bold text-white mb-2">{item.name}</h3>
+                        <p className="text-gray-400 mb-4 text-sm">{item.description}</p>
+                        <p className="text-2xl font-bold text-[#25D366]">{item.price} SAR</p>
                       </div>
                       <button
                         onClick={() => addToOrder(item)}
-                        className="bg-[#25D366] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#20bd5a] transition"
+                        className="bg-gradient-to-r from-[#25D366] to-[#20bd5a] text-white px-6 py-2.5 rounded-xl font-semibold hover:shadow-lg hover:shadow-[#25D366]/20 transition-all duration-300"
                       >
                         Add
                       </button>
@@ -149,33 +152,36 @@ function Order() {
               </div>
             </div>
             
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h2 className="text-3xl font-bold text-[#1a1a1a] mb-6">Your Order</h2>
+            <div className="bg-[#111111] rounded-2xl shadow-lg p-8 border border-white/5">
+              <h2 className="text-3xl font-bold text-white mb-6">Your Order</h2>
               
               {orderList.length === 0 ? (
                 <div className="text-center py-12 text-gray-500">
+                  <svg className="w-16 h-16 mx-auto mb-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M12 22l-2-5h4l-2 5z" />
+                  </svg>
                   <p>No items added yet. Browse the menu to add items.</p>
                 </div>
               ) : (
                 <>
                   <div className="space-y-4 mb-6">
                     {orderList.map((item, idx) => (
-                      <div key={idx} className="flex justify-between items-center border-b pb-4">
+                      <div key={idx} className="flex justify-between items-center border-b border-white/10 pb-4">
                         <div>
-                          <p className="font-medium">{item.name}</p>
+                          <p className="font-medium text-white">{item.name}</p>
                           <p className="text-gray-500">{item.price} SAR each</p>
                         </div>
                         <div className="flex items-center gap-2">
                           <button
                             onClick={() => removeFromOrder(item.name)}
-                            className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center"
+                            className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition"
                           >
                             −
                           </button>
-                          <span className="font-semibold w-6 text-center">{item.quantity}</span>
+                          <span className="font-semibold w-6 text-center text-white">{item.quantity}</span>
                           <button
                             onClick={() => addToOrder(item)}
-                            className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center"
+                            className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition"
                           >
                             +
                           </button>
@@ -184,16 +190,16 @@ function Order() {
                     ))}
                   </div>
                   
-                  <div className="border-t pt-6 mb-6">
+                  <div className="border-t border-white/10 pt-6 mb-6">
                     <div className="flex justify-between text-2xl font-bold">
-                      <span>Total</span>
-                      <span>{getOrderTotal()} SAR</span>
+                      <span className="text-white">Total</span>
+                      <span className="text-[#25D366]">{getOrderTotal()} SAR</span>
                     </div>
                   </div>
                   
                   <button
                     onClick={openWhatsApp}
-                    className="w-full bg-[#25D366] text-white py-4 rounded-xl font-semibold text-lg hover:bg-[#20bd5a] transition"
+                    className="w-full bg-gradient-to-r from-[#25D366] to-[#20bd5a] text-white py-4 rounded-xl font-semibold text-lg hover:shadow-lg hover:shadow-[#25D366]/30 transition-all duration-300"
                   >
                     Send Order via WhatsApp
                   </button>

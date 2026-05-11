@@ -9,7 +9,7 @@ import Location from './pages/Location'
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen bg-white text-gray-800">
         <Header />
         <main className="flex-1">
           <Routes>
