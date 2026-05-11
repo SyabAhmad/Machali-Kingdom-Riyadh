@@ -216,6 +216,86 @@ function Home() {
               <div className="absolute -bottom-6 -left-6 w-72 h-72 bg-gradient-to-r from-[#25D366]/20 to-transparent rounded-full blur-3xl"></div>
             </div>
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
+            <div className="bg-[#111111] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/5 group">
+              <div className="h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=600&q=80" alt="Prawns Ghee Roast" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-2">Prawns Ghee Roast</h3>
+                <p className="text-gray-400 text-sm mb-4">Juicy prawns roasted in ghee with Kundapur spice blend</p>
+                <p className="text-2xl font-bold text-[#25D366]">32 SAR</p>
+              </div>
+            </div>
+
+            <div className="bg-[#111111] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/5 group">
+              <div className="h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1559742811-822873691df8?w=600&q=80" alt="Crab Ghee Roast" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-2">Crab Ghee Roast</h3>
+                <p className="text-gray-400 text-sm mb-4">Fresh crab cooked in aromatic ghee & coastal spices</p>
+                <p className="text-2xl font-bold text-[#25D366]">35 SAR</p>
+              </div>
+            </div>
+
+            <div className="bg-[#111111] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/5 group">
+              <div className="h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600&q=80" alt="Fish Thali" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-2">Fish Thali</h3>
+                <p className="text-gray-400 text-sm mb-4">Complete meal with rice, fish curry, fry & accompaniments</p>
+                <p className="text-2xl font-bold text-[#25D366]">22 SAR</p>
+              </div>
+            </div>
+
+            <div className="bg-[#111111] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/5 group">
+              <div className="h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=600&q=80" alt="Neer Dosa" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-2">Neer Dosa</h3>
+                <p className="text-gray-400 text-sm mb-4">Thin rice crepes with coconut chutney & sambar</p>
+                <p className="text-2xl font-bold text-[#25D366]">10 SAR</p>
+              </div>
+            </div>
+
+            <div className="bg-[#111111] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/5 group">
+              <div className="h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80" alt="Pani Puri" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-2">Pani Puri</h3>
+                <p className="text-gray-400 text-sm mb-4">Crispy puris with spiced mint water & tamarind chutney</p>
+                <p className="text-2xl font-bold text-[#25D366]">12 SAR</p>
+              </div>
+            </div>
+
+            <div className="bg-[#111111] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/5 group">
+              <div className="h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Tawa Fish" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-2">Tawa Fish</h3>
+                <p className="text-gray-400 text-sm mb-4">Classic Mangalorean style with coconut & curry leaves</p>
+                <p className="text-2xl font-bold text-[#25D366]">26 SAR</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link 
+              to="/menu" 
+              className="inline-flex items-center bg-white/10 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 border border-white/10 group"
+            >
+              View Full Menu
+              <svg className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </section>
 

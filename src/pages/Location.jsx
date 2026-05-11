@@ -1,16 +1,44 @@
 function Location() {
   return (
     <div className="min-h-screen">
-      <section className="relative h-80 bg-gradient-to-br from-[#0a0a0a] via-[#111111] to-[#0a0a0a] text-white overflow-hidden">
+      <section className="relative h-[500px] text-white overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-r from-[#25D366]/10 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-gradient-to-r from-orange-500/10 to-transparent rounded-full blur-3xl"></div>
+          <img 
+            src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=1920&q=80" 
+            alt="Restaurant Exterior" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/50 to-[#0a0a0a]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/60 via-transparent to-[#0a0a0a]/40"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center pt-20">
-          <div className="max-w-2xl">
-            <h1 className="text-5xl font-bold mb-4">Visit Us</h1>
-            <p className="text-xl text-gray-400">Authentic Mangalorean seafood in the heart of Riyadh</p>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center pt-20">
+          <span className="inline-flex items-center gap-2 bg-[#25D366]/20 backdrop-blur-sm px-4 py-2 rounded-full w-fit mb-4 border border-[#25D366]/30">
+            <span className="w-2 h-2 bg-[#25D366] rounded-full animate-pulse"></span>
+            <span className="text-sm font-medium text-[#25D366]">Open Daily</span>
+          </span>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">Visit Us</h1>
+          <p className="text-xl text-gray-300 max-w-xl">Experience authentic Mangalorean hospitality in the heart of Al Malaz, Riyadh</p>
+          
+          <div className="flex flex-wrap gap-6 mt-8">
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
+                <span className="text-lg">📍</span>
+              </div>
+              <span className="text-gray-300">Al Malaz, Riyadh</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
+                <span className="text-lg">🕐</span>
+              </div>
+              <span className="text-gray-300">12 PM - 1:30 AM</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
+                <span className="text-lg">⭐</span>
+              </div>
+              <span className="text-gray-300">4.8 Google Rating</span>
+            </div>
           </div>
         </div>
       </section>

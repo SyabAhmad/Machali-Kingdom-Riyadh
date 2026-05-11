@@ -88,16 +88,51 @@ function Order() {
 
   return (
     <div className="min-h-screen">
-      <section className="relative h-80 bg-gradient-to-br from-[#0a0a0a] via-[#111111] to-[#0a0a0a] text-white overflow-hidden">
+      <section className="relative h-[500px] text-white overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-r from-[#25D366]/10 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-gradient-to-r from-orange-500/10 to-transparent rounded-full blur-3xl"></div>
+          <img 
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80" 
+            alt="Restaurant Interior" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/50 to-[#0a0a0a]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/60 via-transparent to-[#0a0a0a]/40"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center pt-20">
-          <div className="max-w-2xl">
-            <h1 className="text-5xl font-bold mb-4">Order Now</h1>
-            <p className="text-xl text-gray-400">Order directly via WhatsApp – no waiting, no apps</p>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center pt-20">
+          <span className="inline-flex items-center gap-2 bg-[#25D366]/20 backdrop-blur-sm px-4 py-2 rounded-full w-fit mb-4 border border-[#25D366]/30">
+            <svg className="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.163-.173.199-.347.223-.644.075-.297-.15-1.255-.462-2.39-1.475-.883-.788-1.48-1.406-1.681-1.775-.2-.372-.022-.57.151-.74.151-.15.332-.391.497-.586.166-.195.221-.33.331-.549.11-.22.055-.411-.027-.576-.082-.166-.739-1.768-1.008-2.413-.262-.628-.529-.542-.72-.533-.184.009-.396.008-.608.008-.211 0-.554.08-.843.389-.29.309-1.23 1.203-1.23 2.935 0 1.732 1.258 3.405 1.431 3.64.174.235 2.478 3.782 6.014 5.306 2.495 1.076 3.002 1.288 4.025 1.226.817-.05 1.734-.708 2.093-1.392.359-.684.359-1.269.252-1.457-.107-.188-.396-.297-.693-.446z"/>
+            </svg>
+            <span className="text-sm font-medium text-[#25D366]">Quick Ordering</span>
+          </span>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">Order Now</h1>
+          <p className="text-xl text-gray-300 max-w-xl">Order directly via WhatsApp — fast, easy, and no app downloads required</p>
+          
+          <div className="flex flex-wrap gap-6 mt-8">
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
+                <svg className="w-5 h-5 text-[#25D366]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <span className="text-gray-300">Instant Response</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <span className="text-gray-300">Delivery to Al Malaz</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
+                <span className="text-lg">💰</span>
+              </div>
+              <span className="text-gray-300">Secure Payment</span>
+            </div>
           </div>
         </div>
       </section>
